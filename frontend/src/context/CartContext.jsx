@@ -5,7 +5,7 @@ const CartContext = createContext();
 export const CartProvider = ({ children }) => {
   const [cartItems, setCartItems] = useState(() => {
     try {
-      const saved = localStorage.getItem('feastify_cart');
+      const saved = localStorage.getItem('easydine_cart') || localStorage.getItem('feastify_cart');
       return saved ? JSON.parse(saved) : [];
     } catch {
       return [];
@@ -14,7 +14,7 @@ export const CartProvider = ({ children }) => {
 
   const [activeRestaurant, setActiveRestaurant] = useState(() => {
     try {
-      const saved = localStorage.getItem('feastify_cart_restaurant');
+      const saved = localStorage.getItem('easydine_cart_restaurant') || localStorage.getItem('feastify_cart_restaurant');
       return saved ? JSON.parse(saved) : null;
     } catch {
       return null;
@@ -26,8 +26,8 @@ export const CartProvider = ({ children }) => {
   const [isCartDrawerOpen, setIsCartDrawerOpen] = useState(false);
 
   useEffect(() => {
-    localStorage.setItem('feastify_cart', JSON.stringify(cartItems));
-    localStorage.setItem('feastify_cart_restaurant', JSON.stringify(activeRestaurant));
+    localStorage.setItem('easydine_cart', JSON.stringify(cartItems));
+    localStorage.setItem('easydine_cart_restaurant', JSON.stringify(activeRestaurant));
   }, [cartItems, activeRestaurant]);
 
   const addToCart = (dish, restaurant) => {

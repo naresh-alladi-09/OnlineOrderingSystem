@@ -74,7 +74,7 @@ export const RestaurantDetail = ({ restaurant, onBack, onNavigateCheckout }) => 
           <span className="text-[#282c3f] font-bold truncate max-w-xs">{restaurant.name}</span>
         </div>
 
-        {/* SWIGGY RESTAURANT INFO CARD */}
+        {/* RESTAURANT INFO CARD */}
         <div className="bg-white rounded-3xl p-5 sm:p-6 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100 mt-2">
           <div className="flex justify-between items-start">
             <div>
@@ -89,7 +89,7 @@ export const RestaurantDetail = ({ restaurant, onBack, onNavigateCheckout }) => 
               </p>
             </div>
 
-            {/* Swiggy Green Rating Badge */}
+            {/* Rating Badge */}
             <div className="p-2 border border-gray-200 rounded-xl text-center shadow-sm flex flex-col items-center">
               <div className="flex items-center gap-1 text-xs font-black text-[#3d9b6d]">
                 <Star className="w-3.5 h-3.5 fill-[#3d9b6d] text-[#3d9b6d]" />
@@ -112,12 +112,12 @@ export const RestaurantDetail = ({ restaurant, onBack, onNavigateCheckout }) => 
               <span>₹{restaurant.costForTwo || 400} for two</span>
             </div>
             <div className="text-[11px] font-normal text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-md hidden sm:inline">
-              ✓ Swiggy Delivery Available in Bhimavaram
+              ✓ EasyDine Delivery Available in Bhimavaram
             </div>
           </div>
         </div>
 
-        {/* SWIGGY DEALS FOR YOU (COUPONS SLIDER) */}
+        {/* DEALS FOR YOU (COUPONS SLIDER) */}
         <div className="mt-6">
           <h3 className="text-sm font-black text-[#282c3f] tracking-tight mb-3 flex items-center gap-1.5">
             <Percent className="w-4 h-4 text-[#fc8019]" />
@@ -242,7 +242,7 @@ export const RestaurantDetail = ({ restaurant, onBack, onNavigateCheckout }) => 
         </div>
       </div>
 
-      {/* FLOATING SWIGGY BOTTOM CART BAR */}
+      {/* FLOATING BOTTOM CART BAR */}
       {cartCount > 0 && (
         <div className="fixed bottom-6 left-4 right-4 max-w-2xl mx-auto z-40 animate-slideUp">
           <div className="bg-[#60b246] text-white rounded-2xl p-3.5 shadow-2xl flex items-center justify-between">

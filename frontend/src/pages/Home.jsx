@@ -10,7 +10,7 @@ import {
   Search,
 } from 'lucide-react';
 
-const SWIGGY_CATEGORIES = [
+const EASYDINE_CATEGORIES = [
   { id: 'Biryani & Pulao', name: 'Biryani', img: 'https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=300&q=80' },
   { id: 'Seafood', name: 'Royyalu (Prawns)', img: 'https://images.unsplash.com/photo-1559742811-822873691df8?auto=format&fit=crop&w=300&q=80' },
   { id: 'Tiffins & Dosa', name: 'Ghee Dosa', img: 'https://images.unsplash.com/photo-1668236543090-82eba5ee5976?auto=format&fit=crop&w=300&q=80' },
@@ -78,7 +78,7 @@ export const Home = ({ onSelectRestaurant }) => {
   return (
     <div className="min-h-screen pb-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6">
-        {/* 1. SWIGGY "WHAT'S ON YOUR MIND?" CAROUSEL */}
+        {/* 1. "WHAT'S ON YOUR MIND?" CAROUSEL */}
         <div className="pb-10 border-b border-gray-100">
           <div className="flex items-center justify-between mb-4">
             <h2 className="text-xl sm:text-2xl font-black text-[#282c3f] tracking-tight">
@@ -88,7 +88,7 @@ export const Home = ({ onSelectRestaurant }) => {
 
           {/* Horizontal Food Circles */}
           <div className="flex items-center gap-6 overflow-x-auto pb-4 scrollbar-none">
-            {SWIGGY_CATEGORIES.map((cat, i) => {
+            {EASYDINE_CATEGORIES.map((cat, i) => {
               const isSelected = selectedCuisine.toLowerCase() === cat.id.toLowerCase();
               return (
                 <button
@@ -122,7 +122,7 @@ export const Home = ({ onSelectRestaurant }) => {
           </div>
         </div>
 
-        {/* 2. SWIGGY "TOP RESTAURANT CHAINS IN BHIMAVARAM" */}
+        {/* 2. "TOP RESTAURANT CHAINS IN BHIMAVARAM" */}
         <div className="py-10 border-b border-gray-100">
           <div className="flex items-center justify-between mb-6">
             <h2 className="text-xl sm:text-2xl font-black text-[#282c3f] tracking-tight">
@@ -158,7 +158,7 @@ export const Home = ({ onSelectRestaurant }) => {
           </div>
         </div>
 
-        {/* 3. SWIGGY "RESTAURANTS WITH ONLINE FOOD DELIVERY IN BHIMAVARAM" */}
+        {/* 3. "RESTAURANTS WITH ONLINE FOOD DELIVERY IN BHIMAVARAM" */}
         <div className="py-10">
           <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-6">
             <h2 className="text-xl sm:text-2xl font-black text-[#282c3f] tracking-tight">
@@ -178,7 +178,7 @@ export const Home = ({ onSelectRestaurant }) => {
             </form>
           </div>
 
-          {/* SWIGGY FILTER PILLS BAR */}
+          {/* FILTER PILLS BAR */}
           <div className="flex items-center gap-2.5 overflow-x-auto pb-6 scrollbar-none">
             {/* Filter Pill */}
             <div className="flex items-center gap-1.5 px-3 py-1.5 rounded-full border border-gray-300 text-xs font-bold text-gray-800 bg-white shadow-sm flex-shrink-0">

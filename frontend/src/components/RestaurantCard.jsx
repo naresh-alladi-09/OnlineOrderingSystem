@@ -8,7 +8,7 @@ export const RestaurantCard = ({ restaurant, onSelect }) => {
       onClick={() => onSelect(restaurant)}
       className="group cursor-pointer transition-transform duration-200 hover:scale-[0.97] flex flex-col"
     >
-      {/* Restaurant Image with Swiggy Offer Overlay */}
+      {/* Restaurant Image with Offer Overlay */}
       <div className="relative h-44 w-full rounded-2xl overflow-hidden bg-gray-100 shadow-[0_2px_8px_rgba(0,0,0,0.06)]">
         <img
           src={restaurant.image}
@@ -17,10 +17,10 @@ export const RestaurantCard = ({ restaurant, onSelect }) => {
           loading="lazy"
         />
 
-        {/* Swiggy Gradient & Offer Overlay */}
+        {/* Gradient & Offer Overlay */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
 
-        {/* Offer Ribbon (Iconic Swiggy Bottom Banner) */}
+        {/* Offer Ribbon (Bottom Banner) */}
         <div className="absolute bottom-2 left-3 right-3 text-white">
           <p className="font-black text-sm md:text-base uppercase tracking-tight drop-shadow-md truncate text-white">
             {restaurant.offer || 'ITEMS AT ₹129'}
@@ -35,7 +35,7 @@ export const RestaurantCard = ({ restaurant, onSelect }) => {
         )}
       </div>
 
-      {/* Restaurant Details (Swiggy Typography) */}
+      {/* Restaurant Details */}
       <div className="pt-3 px-1">
         <h3 className="font-extrabold text-base md:text-lg text-[#282c3f] group-hover:text-[#fc8019] transition-colors truncate">
           {restaurant.name}

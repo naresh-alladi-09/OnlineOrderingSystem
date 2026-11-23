@@ -179,17 +179,17 @@ export const RestaurantPartnerDashboard = ({ onGoHome, onTrackOrder }) => {
 
   return (
     <div className="min-h-screen pb-24 bg-[#f4f5f7]">
-      {/* Top Swiggy Partner Header */}
+      {/* Top EasyDine Partner Header */}
       <div className="bg-[#282c3f] text-white py-6 px-4 sm:px-6 lg:px-8 border-b border-gray-800 shadow-md">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 rounded-2xl bg-[#fc8019] text-white flex items-center justify-center font-black text-xl shadow-md">
+            <div className="w-12 h-12 rounded-2xl bg-gradient-to-tr from-[#e46d0a] to-[#fc8019] text-white flex items-center justify-center font-black text-xl shadow-md">
               <Store className="w-6 h-6" />
             </div>
             <div>
               <div className="flex items-center gap-2">
                 <span className="text-[10px] font-black uppercase tracking-widest text-[#fc8019] bg-orange-950/60 px-2 py-0.5 rounded border border-orange-800">
-                  Swiggy Merchant Partner
+                  EasyDine Restaurant Partner
                 </span>
                 <span className="text-[10px] text-gray-400 font-bold">• Bhimavaram Hub</span>
               </div>
@@ -539,7 +539,7 @@ export const RestaurantPartnerDashboard = ({ onGoHome, onTrackOrder }) => {
                   Menu Inventory for {selectedRestaurant?.name}
                 </h3>
                 <p className="text-xs text-gray-500">
-                  Toggle items in-stock or sold-out in real time for Swiggy customers in Bhimavaram
+                  Toggle items in-stock or sold-out in real time for EasyDine customers in Bhimavaram
                 </p>
               </div>
               <span className="text-xs font-bold bg-gray-100 px-3 py-1 rounded-xl text-gray-700">

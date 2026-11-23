@@ -1,6 +1,6 @@
-# 🍕 Feastify — Full-Stack MERN Online Food Ordering System
+# 🍕 EasyDine — Full-Stack MERN Online Food Ordering System
 
-Feastify is a modern, responsive, multi-restaurant food delivery platform engineered with the **MERN Stack** (MongoDB, Express.js, React, Node.js) and styled with **Tailwind CSS**.
+EasyDine is a modern, responsive, multi-restaurant food delivery platform for Bhimavaram engineered with the **MERN Stack** (MongoDB, Express.js, React, Node.js) and styled with **Tailwind CSS**.
 
 ---
 

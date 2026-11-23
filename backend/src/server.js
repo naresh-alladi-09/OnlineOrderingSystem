@@ -21,7 +21,7 @@ app.use(express.json());
 // Health Check & Root
 app.get('/', (req, res) => {
   res.json({
-    app: 'Feastify - Online Food Ordering Platform API',
+    app: 'EasyDine - Online Food Ordering Platform API',
     status: 'Operational',
     version: '1.0.0',
     dbConnected: isDbConnected(),
@@ -62,7 +62,7 @@ const PORT = process.env.PORT || 5000;
 const startServer = async () => {
   await connectDB();
   app.listen(PORT, () => {
-    console.log(`🚀 Feastify Backend Server running at http://localhost:${PORT}`);
+    console.log(`🚀 EasyDine Backend Server running at http://localhost:${PORT}`);
   });
 };
 

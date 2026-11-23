@@ -61,7 +61,7 @@ export const OrderTracking = ({ orderId, initialOrder, onGoHome }) => {
 
     setSimulating(true);
     try {
-      const updated = await api.updateOrderStatus(order._id, nextStatus, `Swiggy radar update: ${nextStatus}`);
+      const updated = await api.updateOrderStatus(order._id, nextStatus, `EasyDine live update: ${nextStatus}`);
       setOrder(updated);
     } catch (err) {
       console.error('Simulation error:', err);
@@ -83,12 +83,12 @@ export const OrderTracking = ({ orderId, initialOrder, onGoHome }) => {
 
   return (
     <div className="min-h-screen pb-20 bg-[#f1f1f6]">
-      {/* Top Banner (Swiggy Style) */}
+      {/* Top Banner (EasyDine Style) */}
       <div className="bg-[#282c3f] text-white py-8 px-4 sm:px-6 lg:px-8 shadow-md">
         <div className="max-w-4xl mx-auto flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <div>
             <div className="flex items-center gap-2 text-gray-400 text-xs font-bold mb-1">
-              <span>Order #{order._id?.slice(-8) || 'SWIGGY-BVR'}</span>
+              <span>Order #{order._id?.slice(-8) || 'ED-BVR'}</span>
               <span>•</span>
               <span>{new Date(order.createdAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span>
             </div>
@@ -123,7 +123,7 @@ export const OrderTracking = ({ orderId, initialOrder, onGoHome }) => {
       </div>
 
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 -mt-4">
-        {/* Swiggy Simulator Ribbon */}
+        {/* EasyDine Simulator Ribbon */}
         <div className="mb-6 bg-gradient-to-r from-orange-600 to-amber-600 text-white rounded-2xl p-4 shadow-xl flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3">
             <div className="w-10 h-10 rounded-xl bg-white text-[#fc8019] flex items-center justify-center font-black text-sm shadow">
@@ -226,7 +226,7 @@ export const OrderTracking = ({ orderId, initialOrder, onGoHome }) => {
             </div>
             <div>
               <span className="text-[10px] font-black uppercase tracking-wider text-[#fc8019]">
-                Swiggy Delivery Partner • Bhimavaram
+                EasyDine Delivery Partner • Bhimavaram
               </span>
               <h4 className="text-base font-black text-[#282c3f]">
                 {order.driverInfo?.name || 'Kalyan Varma'}

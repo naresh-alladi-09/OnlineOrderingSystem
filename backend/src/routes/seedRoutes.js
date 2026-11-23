@@ -58,7 +58,7 @@ router.post('/', async (req, res) => {
     }
 
     res.json({
-      message: 'MongoDB successfully seeded with Feastify restaurants, dishes, and accounts!',
+      message: 'MongoDB successfully seeded with EasyDine restaurants, dishes, and accounts!',
       restaurantsCount: initialRestaurants.length,
       dishesCount: initialDishes.length,
       usersCount: createdUsers.length,

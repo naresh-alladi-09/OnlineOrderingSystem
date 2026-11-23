@@ -1051,7 +1051,7 @@ export const initialUsers = [
   {
     _id: "user_admin",
     name: "Bhimavaram Admin",
-    email: "admin@feastify.com",
+    email: "admin@easydine.com",
     password: "$2a$10$wT0vR6z8r3893F7p7L857u3aU3Y3fL5kYV1jV6KjG7V6n3s2oV.fK", // 'admin123'
     rawPassword: "admin123",
     role: "admin",
@@ -1069,7 +1069,7 @@ export const initialUsers = [
   {
     _id: "user_demo",
     name: "Ravi Teja Varma",
-    email: "user@feastify.com",
+    email: "user@easydine.com",
     password: "$2a$10$wT0vR6z8r3893F7p7L857u3aU3Y3fL5kYV1jV6KjG7V6n3s2oV.fK", // 'user123'
     rawPassword: "user123",
     role: "customer",

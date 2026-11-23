@@ -38,7 +38,7 @@ export const LoginModal = () => {
   const fillQuickDemo = (role) => {
     if (role === 'admin') {
       setFormData({
-        email: 'admin@feastify.com',
+        email: 'admin@easydine.com',
         password: 'admin123',
         name: 'Platform Admin',
         phone: '',
@@ -47,7 +47,7 @@ export const LoginModal = () => {
       setIsLoginMode(true);
     } else {
       setFormData({
-        email: 'user@feastify.com',
+        email: 'user@easydine.com',
         password: 'user123',
         name: 'Demo Customer',
         phone: '',
@@ -67,7 +67,7 @@ export const LoginModal = () => {
               {isLoginMode ? 'Welcome Back!' : 'Create Your Account'}
             </h2>
             <p className="text-orange-100 text-xs mt-0.5">
-              {isLoginMode ? 'Sign in to order your favorite cravings' : 'Join Feastify for special food perks & discounts'}
+              {isLoginMode ? 'Sign in to order your favorite cravings' : 'Join EasyDine for special food perks & discounts'}
             </p>
           </div>
           <button

@@ -37,7 +37,7 @@ export const Checkout = ({ onBack, onOrderPlaced }) => {
   const [addressType, setAddressType] = useState('Home');
   const [contactData, setContactData] = useState({
     name: user?.name || 'Ravi Teja Varma',
-    email: user?.email || 'user@feastify.com',
+    email: user?.email || 'user@easydine.com',
     phone: user?.phone || '+91 99490 88776',
   });
 
@@ -106,7 +106,7 @@ export const Checkout = ({ onBack, onOrderPlaced }) => {
         restaurantId: activeRestaurant?._id,
         restaurantName: activeRestaurant?.name || 'Bhimavaram Partner Restaurant',
         customerName: contactData.name,
-        customerEmail: contactData.email || 'guest@feastify.com',
+        customerEmail: contactData.email || 'guest@easydine.com',
         customerPhone: contactData.phone,
         deliveryAddress: addressData,
         paymentMethod,
@@ -448,7 +448,7 @@ export const Checkout = ({ onBack, onOrderPlaced }) => {
                 </div>
               </div>
 
-              {/* Swiggy Bill Details */}
+              {/* EasyDine Bill Details */}
               <div className="pt-2 border-t border-gray-100 space-y-2 text-xs text-[#686b78]">
                 <div className="flex justify-between">
                   <span>Item Total</span>
@@ -488,7 +488,7 @@ export const Checkout = ({ onBack, onOrderPlaced }) => {
                 </div>
               </div>
 
-              {/* Swiggy Order Button */}
+              {/* EasyDine Order Button */}
               <button
                 type="submit"
                 disabled={submitting}

@@ -14,7 +14,7 @@ export const DishCard = ({ dish, restaurant }) => {
       <div className="flex-1 pr-2">
         {/* Veg/Non-Veg & Bestseller Badge */}
         <div className="flex items-center gap-2 mb-1.5">
-          {/* Swiggy Veg / Non-Veg Icon */}
+          {/* Veg / Non-Veg Icon */}
           <div
             className={`w-4 h-4 border-2 rounded-sm flex items-center justify-center p-0.5 ${
               dish.isVeg ? 'border-emerald-600' : 'border-[#8e3a29]'
@@ -56,7 +56,7 @@ export const DishCard = ({ dish, restaurant }) => {
         </p>
       </div>
 
-      {/* Right Image & Swiggy ADD Button */}
+      {/* Right Image & ADD Button */}
       <div className="relative flex flex-col items-center w-32 sm:w-36 flex-shrink-0">
         <div className="w-32 h-28 sm:w-36 sm:h-32 rounded-2xl overflow-hidden bg-gray-50 shadow-sm">
           <img
@@ -67,7 +67,7 @@ export const DishCard = ({ dish, restaurant }) => {
           />
         </div>
 
-        {/* Swiggy Overlapping ADD Button */}
+        {/* Overlapping ADD Button */}
         <div className="absolute -bottom-2.5">
           {quantity === 0 ? (
             <button

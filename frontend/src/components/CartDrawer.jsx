@@ -125,7 +125,7 @@ export const CartDrawer = ({ onNavigateCheckout }) => {
                       </p>
                     </div>
 
-                    {/* Swiggy Quantity Stepper */}
+                    {/* Quantity Stepper */}
                     <div className="flex items-center bg-white border border-gray-300 rounded-lg overflow-hidden text-[#3d9b6d] font-black text-xs shadow-sm">
                       <button
                         onClick={() => updateQuantity(item.dishId || item._id, -1)}
@@ -151,7 +151,7 @@ export const CartDrawer = ({ onNavigateCheckout }) => {
                   </div>
                 ))}
 
-                {/* Swiggy Delivery Partner Tip */}
+                {/* Delivery Partner Tip */}
                 <div className="pt-4">
                   <div className="flex items-center gap-1.5 text-xs font-black text-[#282c3f] mb-1">
                     <Heart className="w-3.5 h-3.5 text-rose-500 fill-rose-500" />
@@ -218,7 +218,7 @@ export const CartDrawer = ({ onNavigateCheckout }) => {
                 )}
               </div>
 
-              {/* Swiggy Bill Details */}
+              {/* EasyDine Bill Details */}
               <div className="p-4 bg-white border-t border-gray-100 space-y-1.5 text-xs text-[#686b78]">
                 <p className="font-black text-xs text-[#282c3f] uppercase tracking-wider mb-2">
                   Bill Details
@@ -268,7 +268,7 @@ export const CartDrawer = ({ onNavigateCheckout }) => {
                 </div>
               </div>
 
-              {/* Swiggy Cancellation Disclaimer */}
+              {/* EasyDine Cancellation Disclaimer */}
               <div className="px-4 py-2 bg-gray-50 border-t border-gray-100 text-[10px] text-gray-400 leading-tight">
                 Review your order and address details to avoid cancellations. 100% refund is not applicable after kitchen accepts order.
               </div>

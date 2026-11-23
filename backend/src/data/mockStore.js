@@ -11,7 +11,7 @@ let orders = [
     _id: "order_bvr_101",
     user: "user_demo",
     customerName: "Ravi Teja Varma",
-    customerEmail: "user@feastify.com",
+    customerEmail: "user@easydine.com",
     customerPhone: "+91 99490 88776",
     restaurant: "rest_1",
     restaurantName: "D-Vindhu Family Restaurant",

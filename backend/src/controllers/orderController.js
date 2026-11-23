@@ -52,7 +52,7 @@ export const createOrder = async (req, res) => {
     const orderPayload = {
       user: req.user ? req.user._id : null,
       customerName: customerName || (req.user ? req.user.name : 'Guest Customer'),
-      customerEmail: customerEmail || (req.user ? req.user.email : 'guest@feastify.com'),
+      customerEmail: customerEmail || (req.user ? req.user.email : 'guest@easydine.com'),
       customerPhone: customerPhone || (req.user ? req.user.phone : '+91 99490 88776'),
       restaurant: restaurantId,
       restaurantName: restaurantName || 'Bhimavaram Food Kitchen',

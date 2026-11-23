@@ -1,11 +1,11 @@
 @echo off
-title Feastify - Food Ordering System Launcher
+title EasyDine - Food Ordering System Launcher
 echo ====================================================
-echo Starting Feastify Backend & Frontend Servers...
+echo Starting EasyDine Backend & Frontend Servers...
 echo ====================================================
 
-start "Feastify Backend API (Port 5000)" cmd /k "cd backend && npm start"
-start "Feastify Frontend React (Port 5173)" cmd /k "cd frontend && npm run dev"
+start "EasyDine Backend API (Port 5000)" cmd /k "cd backend && npm start"
+start "EasyDine Frontend React (Port 5173)" cmd /k "cd frontend && npm run dev"
 
 echo.
 echo Servers are launching!

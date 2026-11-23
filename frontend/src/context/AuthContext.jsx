@@ -6,14 +6,14 @@ const AuthContext = createContext();
 export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(() => {
     try {
-      const savedUser = localStorage.getItem('feastify_user');
+      const savedUser = localStorage.getItem('easydine_user') || localStorage.getItem('feastify_user');
       return savedUser ? JSON.parse(savedUser) : null;
     } catch {
       return null;
     }
   });
 
-  const [token, setToken] = useState(() => localStorage.getItem('feastify_token') || null);
+  const [token, setToken] = useState(() => localStorage.getItem('easydine_token') || localStorage.getItem('feastify_token') || null);
   const [loading, setLoading] = useState(true);
   const [authModal, setAuthModal] = useState({ isOpen: false, mode: 'login' });
 
@@ -22,7 +22,7 @@ export const AuthProvider = ({ children }) => {
       api.getProfile()
         .then((profile) => {
           setUser(profile);
-          localStorage.setItem('feastify_user', JSON.stringify(profile));
+          localStorage.setItem('easydine_user', JSON.stringify(profile));
         })
         .catch(() => {
           // Token expired or invalid
@@ -38,8 +38,8 @@ export const AuthProvider = ({ children }) => {
     const data = await api.login({ email, password });
     setUser(data);
     setToken(data.token);
-    localStorage.setItem('feastify_token', data.token);
-    localStorage.setItem('feastify_user', JSON.stringify(data));
+    localStorage.setItem('easydine_token', data.token);
+    localStorage.setItem('easydine_user', JSON.stringify(data));
     setAuthModal({ isOpen: false, mode: 'login' });
     return data;
   };
@@ -48,8 +48,8 @@ export const AuthProvider = ({ children }) => {
     const data = await api.register(userData);
     setUser(data);
     setToken(data.token);
-    localStorage.setItem('feastify_token', data.token);
-    localStorage.setItem('feastify_user', JSON.stringify(data));
+    localStorage.setItem('easydine_token', data.token);
+    localStorage.setItem('easydine_user', JSON.stringify(data));
     setAuthModal({ isOpen: false, mode: 'login' });
     return data;
   };
@@ -57,6 +57,8 @@ export const AuthProvider = ({ children }) => {
   const logout = () => {
     setUser(null);
     setToken(null);
+    localStorage.removeItem('easydine_token');
+    localStorage.removeItem('easydine_user');
     localStorage.removeItem('feastify_token');
     localStorage.removeItem('feastify_user');
   };

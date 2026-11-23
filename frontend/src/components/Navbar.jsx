@@ -15,6 +15,7 @@ import {
   Percent,
   HelpCircle,
   Store,
+  UtensilsCrossed,
 } from 'lucide-react';
 
 export const Navbar = ({ currentView, setCurrentView, onSelectRestaurant, onSearchClick }) => {
@@ -36,21 +37,19 @@ export const Navbar = ({ currentView, setCurrentView, onSelectRestaurant, onSear
     <header className="sticky top-0 z-40 bg-white border-b border-gray-100 shadow-[0_15px_40px_-20px_rgba(40,44,63,0.15)] transition-all">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          {/* Left: Swiggy Logo & Bhimavaram Location Selector */}
+          {/* Left: EasyDine Logo & Bhimavaram Location Selector */}
           <div className="flex items-center gap-6 md:gap-8">
-            {/* Swiggy Logo */}
+            {/* EasyDine Logo */}
             <button
               onClick={() => setCurrentView('home')}
               className="flex items-center gap-2.5 group text-left hover:scale-105 transition-transform"
             >
-              <div className="w-10 h-10 rounded-2xl bg-[#fc8019] flex items-center justify-center text-white shadow-md shadow-orange-500/25">
-                <svg viewBox="0 0 24 24" fill="currentColor" className="w-6 h-6">
-                  <path d="M12 2C6.48 2 2 6.48 2 12c0 4.19 2.58 7.78 6.27 9.27.42.08.57-.18.57-.41v-1.46c-2.52.55-3.05-1.22-3.05-1.22-.41-1.04-1-1.32-1-1.32-.82-.56.06-.55.06-.55.91.06 1.39.93 1.39.93.81 1.39 2.12.99 2.64.76.08-.59.32-.99.58-1.22-2.01-.23-4.13-1.01-4.13-4.48 0-.99.35-1.8 1-2.44-.09-.23-.43-1.15.09-2.4 0 0 .76-.24 2.5 1.05.73-.2 1.5-.3 2.27-.3.77 0 1.54.1 2.27.3 1.74-1.29 2.5-1.05 2.5-1.05.52 1.25.18 2.17.09 2.4.65.64 1 1.45 1 2.44 0 3.48-2.12 4.25-4.14 4.47.33.28.62.84.62 1.69v2.51c0 .23.15.5.58.41C19.42 19.78 22 16.19 22 12c0-5.52-4.48-10-10-10z" />
-                </svg>
+              <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-[#e46d0a] to-[#fc8019] flex items-center justify-center text-white shadow-md shadow-orange-500/25">
+                <UtensilsCrossed className="w-5 h-5" />
               </div>
               <div className="flex flex-col">
-                <span className="text-2xl font-black tracking-tight text-[#fc8019] leading-none">
-                  SWIGGY
+                <span className="text-2xl font-black tracking-tight text-[#282c3f] leading-none">
+                  Easy<span className="text-[#fc8019]">Dine</span>
                 </span>
                 <span className="text-[10px] font-extrabold uppercase tracking-widest text-gray-400 mt-0.5">
                   Bhimavaram
@@ -226,7 +225,7 @@ export const Navbar = ({ currentView, setCurrentView, onSelectRestaurant, onSear
               </button>
             )}
 
-            {/* Cart Button with Swiggy Badge */}
+            {/* Cart Button with EasyDine Badge */}
             <button
               onClick={openCartDrawer}
               className="flex items-center gap-2 font-bold hover:text-[#fc8019] transition-colors relative"
